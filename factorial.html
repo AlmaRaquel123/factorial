@@ -1,0 +1,54 @@
+<!-- hola esto es un comentario-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Factorial de un numero</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" type="text/css" href="css/mystilo.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function (){
+			//alert("hola mundo");
+
+			$("#btnSumar").click(function(){
+				var n1=parseInt($("#num1").val());
+
+				var fac=1;
+
+					while (n1!=0){
+
+						fac=fac*n1;
+						n1--;
+					}
+					$("#res").val(fac);
+				
+				alert("El resultado del factorial  es:" +fac);
+			});
+		});
+	</script>
+</head>
+<body>
+	
+		
+			
+		</div>
+		<a href="#Suma" data-role="button" data-transition="turn">Calcular suma</a>
+		</div>
+		
+	<div data-role="page" id="Suma">
+		<div data-role="header">
+		<p>Factorial</p>
+		
+		</div>
+		<div data-role="content">
+			<input type="text" id="num1" placeholder="Escribe un número">	
+			
+			<input type="button" id="btnSumar" value="Calcular factorial">
+		</div>
+		
+	</div>
+</body>
+</html>
